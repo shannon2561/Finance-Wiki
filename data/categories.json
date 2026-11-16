@@ -1,0 +1,8 @@
+[
+  { "id": "derivatives",    "name": "衍生性商品",     "name_en": "Derivatives",          "color": "#4F7A5A", "desc": "選擇權、期貨與定價模型" },
+  { "id": "asset-pricing",  "name": "資產定價與因子", "name_en": "Asset Pricing",        "color": "#3E6A8A", "desc": "為什麼不同資產有不同的期望報酬" },
+  { "id": "portfolio",      "name": "投資組合與績效", "name_en": "Portfolio & Performance", "color": "#B08D57", "desc": "怎麼配置資金、怎麼衡量好壞" },
+  { "id": "ml",             "name": "機器學習方法",   "name_en": "ML Methods",           "color": "#7A5C8E", "desc": "跨領域的統計與機器學習工具" },
+  { "id": "quant-practice", "name": "量化策略實務",   "name_en": "Quant Practice",       "color": "#A35D4F", "desc": "回測、驗證與策略開發流程" },
+  { "id": "llm",            "name": "AI 與 LLM 系統", "name_en": "AI & LLM Systems",     "color": "#4C7F86", "desc": "RAG、Agent 等 LLM 工程主題" }
+]

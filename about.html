@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>關於這個網站｜Finance Wiki</title>
+<meta name="description" content="衍生性商品、資產定價、投資組合、機器學習與量化實務的概念筆記。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;700&family=Noto+Sans+TC:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/vendor/katex/katex.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%234F7A5A'/%3E%3Ctext x='16' y='22' font-size='17' text-anchor='middle' fill='white' font-family='serif'%3EΣ%3C/text%3E%3C/svg%3E">
+</head>
+<body data-page="about">
+<header class="site-header"><div class="wrap">
+  <a class="brand" href="index.html"><span class="brand-mark">Σ</span>Finance Wiki</a>
+  <nav class="nav">
+    <a href="index.html">概念</a>
+    <a href="index.html#map">學習地圖</a>
+    <a href="about.html" class="active">關於這個網站</a>
+  </nav>
+</div></header>
+<main class="wrap">
+<div class="prose">
+  <div class="eyebrow">About</div>
+  <h1>這個網站是怎麼長出來的</h1>
+  <p>每一頁概念，都是 AI 讀完工作手冊 <code>AGENTS.md</code> 後，從一份私人 LLM Wiki 改寫出來的。手冊規定網站的目的、風格、頁面格式、檔案位置，以及哪些內容可以公開。</p>
+
+  <h2>三層分工</h2>
+  <div class="flow">
+    <div class="box private"><b>私人 LLM Wiki</b>課堂講義、論文摘要、專案紀錄、人物頁。只存在本機，<strong>不上傳</strong>。</div>
+    <div class="arrow">→</div>
+    <div class="box rules"><b>AGENTS.md 規則</b>決定什麼能公開、要怎麼改寫、放在哪裡、長什麼樣子。</div>
+    <div class="arrow">→</div>
+    <div class="box"><b>公開網站</b><code>content/</code> 放改寫後的概念頁，<code>data/pages.json</code> 是索引，網頁外殼固定不動。</div>
+  </div>
+  <p>所以<strong>新增內容不用碰 HTML</strong>：網頁外殼只寫一次，之後每個新頁面都只是「一個 Markdown 檔＋索引裡的一筆資料」。</p>
+
+  <h2>每一頁都長一樣</h2>
+  <p>每個概念頁固定五個區塊，順序不能改：</p>
+  <ol>
+    <li><b>一句話</b>：沒學過的人也能抓到重點</li>
+    <li><b>定義</b>：正式定義與公式，每個符號都解釋</li>
+    <li><b>直覺理解</b>：用例子講「為什麼會這樣」</li>
+    <li><b>常見誤解與限制</b>：模型什麼時候會失效</li>
+    <li><b>延伸閱讀</b>：公開文獻</li>
+  </ol>
+  <p>固定格式讓讀者每一頁都知道去哪裡找什麼，也讓 AI 不用每次重新決定版面。</p>
+
+  <h2>新增一頁只要一句話</h2>
+  <p>要把私人 wiki 裡的某個概念上架，只要對 AI 說：</p>
+<pre><code>請先讀 AGENTS.md，然後把 wiki 的 idiosyncratic-volatility 上架成概念頁。</code></pre>
+  <p>AI 會依手冊第 7.1 節的流程做事：</p>
+  <ol class="steps">
+    <li>查 <code>data/pages.json</code> 確認還沒有這一頁</li>
+    <li>讀私人 wiki 的原始概念頁與相關來源，理解脈絡</li>
+    <li>選分類、程度、關鍵字與相關概念</li>
+    <li>照模板寫出五個區塊，同時依隱私規則拿掉不能公開的內容</li>
+    <li>在索引加一筆，並把新頁面雙向連到相關概念</li>
+    <li>執行 <code>python tools/check_site.py</code>，全部通過才算完成</li>
+  </ol>
+
+  <h2>隱私守門</h2>
+  <div class="callout">
+    <p>私人筆記裡混著不該公開的東西：同學和講者的名字、社團內部資訊、升學規劃、專案的實際績效數字，以及有版權的論文全文。手冊第 6 節把這些列成「永遠不能出現在網站上」的清單，檢查腳本也會自動掃描關鍵字，並比對私人 wiki 人物頁裡的人名。</p>
+  </div>
+
+  <h2>技術</h2>
+  <ul>
+    <li>純 HTML／CSS／JavaScript，沒有建置步驟，放上 GitHub Pages 就能看</li>
+    <li>Markdown 用 <a href="https://marked.js.org/">marked</a> 轉換、數學式用 <a href="https://katex.org/">KaTeX</a> 排版（兩者都已放在 repo 內，不依賴外部 CDN）</li>
+    <li><code>tools/check_site.py</code> 檢查索引一致性、頁面結構、雙向連結與隱私關鍵字</li>
+  </ul>
+</div>
+</main>
+<footer class="site-footer"><div class="wrap">
+  <span>Finance Wiki・目前收錄 <b id="footer-count">—</b> 個概念</span>
+  <span>內容由 AI 依 <a href="about.html">AGENTS.md 規則</a> 從私人學習筆記改寫・<a href="https://github.com/">GitHub</a></span>
+</div></footer>
+<script src="assets/vendor/marked/marked.min.js"></script>
+<script src="assets/vendor/katex/katex.min.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>

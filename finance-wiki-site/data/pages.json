@@ -1,0 +1,278 @@
+[
+  {
+    "slug": "derivatives",
+    "title": "衍生性金融商品",
+    "title_en": "Derivatives",
+    "category": "derivatives",
+    "level": "基礎",
+    "summary": "價值跟著標的資產走的合約：遠期、期貨、選擇權與交換，以及最基本的買權賣權平價關係。",
+    "tags": [
+      "期貨",
+      "選擇權",
+      "避險"
+    ],
+    "related": [
+      "black-scholes-model",
+      "portfolio-optimization"
+    ],
+    "updated": "2026-11-16",
+    "status": "published"
+  },
+  {
+    "slug": "black-scholes-model",
+    "title": "Black-Scholes 模型",
+    "title_en": "Black-Scholes Model",
+    "category": "derivatives",
+    "level": "進階",
+    "summary": "用無套利與連續避險推導出的歐式選擇權封閉解，以及背後的風險中立定價原理。",
+    "tags": [
+      "選擇權定價",
+      "風險中立",
+      "Greeks"
+    ],
+    "related": [
+      "derivatives"
+    ],
+    "updated": "2026-11-16",
+    "status": "published"
+  },
+  {
+    "slug": "factor-models",
+    "title": "因子模型",
+    "title_en": "Factor Models",
+    "category": "asset-pricing",
+    "level": "中階",
+    "summary": "用少數共同風險因子解釋股票平均報酬的差異，從 CAPM 一路發展到 Fama-French 五因子。",
+    "tags": [
+      "CAPM",
+      "Fama-French",
+      "因子動物園"
+    ],
+    "related": [
+      "momentum",
+      "idiosyncratic-volatility",
+      "principal-component-analysis",
+      "risk-premium-pca",
+      "machine-learning-asset-pricing"
+    ],
+    "updated": "2026-11-16",
+    "status": "published"
+  },
+  {
+    "slug": "momentum",
+    "title": "動能效應",
+    "title_en": "Momentum",
+    "category": "asset-pricing",
+    "level": "中階",
+    "summary": "過去 3 到 12 個月的贏家傾向繼續跑贏輸家，拉長到幾年後又會反轉。",
+    "tags": [
+      "異常報酬",
+      "橫截面",
+      "動能崩盤"
+    ],
+    "related": [
+      "factor-models",
+      "risk-premium-pca",
+      "machine-learning-asset-pricing"
+    ],
+    "updated": "2026-11-16",
+    "status": "published"
+  },
+  {
+    "slug": "idiosyncratic-volatility",
+    "title": "特異性波動度（IVOL）",
+    "title_en": "Idiosyncratic Volatility",
+    "category": "asset-pricing",
+    "level": "中階",
+    "summary": "因子模型解釋不了的個股專屬波動，以及「IVOL 越高、未來報酬反而越低」的異常現象。",
+    "tags": [
+      "因子迴歸",
+      "殘差",
+      "IVOL 之謎"
+    ],
+    "related": [
+      "factor-models"
+    ],
+    "updated": "2026-11-16",
+    "status": "published"
+  },
+  {
+    "slug": "machine-learning-asset-pricing",
+    "title": "機器學習資產定價",
+    "title_en": "Machine Learning in Asset Pricing",
+    "category": "asset-pricing",
+    "level": "進階",
+    "summary": "用正則化迴歸、樹模型與神經網路從上百個特徵預測股票報酬，同時控制過度配適。",
+    "tags": [
+      "報酬預測",
+      "樹模型",
+      "神經網路"
+    ],
+    "related": [
+      "factor-models",
+      "momentum",
+      "regularization",
+      "principal-component-analysis",
+      "backtest-overfitting-and-validation"
+    ],
+    "updated": "2026-11-16",
+    "status": "published"
+  },
+  {
+    "slug": "risk-premium-pca",
+    "title": "RP-PCA（風險溢酬主成分分析）",
+    "title_en": "Risk-Premium PCA",
+    "category": "asset-pricing",
+    "level": "進階",
+    "summary": "在 PCA 目標函數中加入橫截面定價誤差，讓萃取出的統計因子同時解釋報酬的共變與平均差異。",
+    "tags": [
+      "統計因子",
+      "Lettau-Pelger",
+      "台股"
+    ],
+    "related": [
+      "principal-component-analysis",
+      "factor-models",
+      "momentum",
+      "sharpe-ratio"
+    ],
+    "updated": "2026-11-16",
+    "status": "published"
+  },
+  {
+    "slug": "sharpe-ratio",
+    "title": "Sharpe Ratio（夏普比率）",
+    "title_en": "Sharpe Ratio",
+    "category": "portfolio",
+    "level": "基礎",
+    "summary": "每承擔一單位波動能換到多少超額報酬，是最常用的風險調整後績效指標。",
+    "tags": [
+      "績效指標",
+      "風險調整",
+      "年化"
+    ],
+    "related": [
+      "portfolio-optimization",
+      "risk-premium-pca",
+      "backtest-overfitting-and-validation"
+    ],
+    "updated": "2026-11-16",
+    "status": "published"
+  },
+  {
+    "slug": "portfolio-optimization",
+    "title": "投資組合最佳化",
+    "title_en": "Portfolio Optimization",
+    "category": "portfolio",
+    "level": "中階",
+    "summary": "從 Markowitz 均值－變異數框架出發，在報酬與風險之間算出最佳配置，以及它為何對估計誤差敏感。",
+    "tags": [
+      "Markowitz",
+      "效率前緣",
+      "資產配置"
+    ],
+    "related": [
+      "sharpe-ratio",
+      "regularization",
+      "derivatives"
+    ],
+    "updated": "2026-11-16",
+    "status": "published"
+  },
+  {
+    "slug": "principal-component-analysis",
+    "title": "主成分分析（PCA）",
+    "title_en": "Principal Component Analysis",
+    "category": "ml",
+    "level": "中階",
+    "summary": "把大量彼此相關的變數濃縮成少數互不相關的主成分，在金融中用來萃取統計因子。",
+    "tags": [
+      "降維",
+      "特徵值分解",
+      "統計因子"
+    ],
+    "related": [
+      "risk-premium-pca",
+      "factor-models",
+      "machine-learning-asset-pricing"
+    ],
+    "updated": "2026-11-16",
+    "status": "published"
+  },
+  {
+    "slug": "regularization",
+    "title": "正則化（Ridge／Lasso）",
+    "title_en": "Regularization",
+    "category": "ml",
+    "level": "中階",
+    "summary": "在目標函數加上複雜度懲罰，用一點偏誤換取更好的樣本外表現：Ridge、Lasso 與 Elastic Net。",
+    "tags": [
+      "過度配適",
+      "偏誤變異取捨",
+      "交叉驗證"
+    ],
+    "related": [
+      "machine-learning-asset-pricing",
+      "portfolio-optimization",
+      "backtest-overfitting-and-validation"
+    ],
+    "updated": "2026-11-16",
+    "status": "published"
+  },
+  {
+    "slug": "backtest-overfitting-and-validation",
+    "title": "回測過度配適與驗證",
+    "title_en": "Backtest Overfitting & Validation",
+    "category": "quant-practice",
+    "level": "中階",
+    "summary": "為什麼漂亮的回測常常是運氣，以及參數高原、Walk-forward 等驗證方法如何降低自我欺騙。",
+    "tags": [
+      "回測",
+      "前視偏誤",
+      "參數高原"
+    ],
+    "related": [
+      "sharpe-ratio",
+      "regularization",
+      "machine-learning-asset-pricing"
+    ],
+    "updated": "2026-11-16",
+    "status": "published"
+  },
+  {
+    "slug": "llm-knowledge-base-architecture",
+    "title": "LLM Wiki 知識庫架構",
+    "title_en": "LLM Knowledge Base Architecture",
+    "category": "llm",
+    "level": "基礎",
+    "summary": "讓 AI 持續維護個人知識庫的三層架構：唯讀原始資料、AI 整理的筆記與明文規則，搭配三個標準操作。",
+    "tags": [
+      "LLM Wiki",
+      "Agent",
+      "知識管理"
+    ],
+    "related": [
+      "retrieval-augmented-generation"
+    ],
+    "updated": "2026-11-16",
+    "status": "published"
+  },
+  {
+    "slug": "retrieval-augmented-generation",
+    "title": "檢索增強生成（RAG）",
+    "title_en": "Retrieval-Augmented Generation",
+    "category": "llm",
+    "level": "中階",
+    "summary": "讓語言模型先檢索相關段落再回答，用 BM25、向量檢索與排序融合降低幻覺。",
+    "tags": [
+      "BM25",
+      "向量檢索",
+      "RRF"
+    ],
+    "related": [
+      "llm-knowledge-base-architecture"
+    ],
+    "updated": "2026-11-16",
+    "status": "published"
+  }
+]

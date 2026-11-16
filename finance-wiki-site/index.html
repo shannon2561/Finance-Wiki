@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Finance Wiki｜金融概念筆記</title>
+<meta name="description" content="衍生性商品、資產定價、投資組合、機器學習與量化實務的概念筆記。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;700&family=Noto+Sans+TC:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/vendor/katex/katex.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%234F7A5A'/%3E%3Ctext x='16' y='22' font-size='17' text-anchor='middle' fill='white' font-family='serif'%3EΣ%3C/text%3E%3C/svg%3E">
+</head>
+<body data-page="home">
+<header class="site-header"><div class="wrap">
+  <a class="brand" href="index.html"><span class="brand-mark">Σ</span>Finance Wiki</a>
+  <nav class="nav">
+    <a href="index.html" class="active">概念</a>
+    <a href="index.html#map">學習地圖</a>
+    <a href="about.html">關於這個網站</a>
+  </nav>
+</div></header>
+<main class="wrap">
+  <section class="hero">
+    <div class="eyebrow">Finance Concept Wiki</div>
+    <h1>金融概念筆記</h1>
+    <p class="lead">衍生性商品、資產定價、投資組合、機器學習與量化實務的常用概念。包含定義、公式、直覺解釋和延伸閱讀。</p>
+    <div class="stats">
+      <div class="stat"><b id="stat-pages">—</b><span>個概念</span></div>
+      <div class="stat"><b id="stat-cats">—</b><span>個主題分類</span></div>
+      <div class="stat"><b id="stat-updated">—</b><span>最近更新</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="toolbar">
+      <input id="search" class="search" type="search" placeholder="搜尋概念、英文名稱或關鍵字，例如：選擇權、PCA、Sharpe" aria-label="搜尋概念">
+      <div id="chips" class="chips" role="toolbar" aria-label="依分類篩選"></div>
+    </div>
+    <div id="grid" class="grid"></div>
+  </section>
+
+  <section id="map-section">
+    <h2 class="section-title">學習地圖</h2>
+    <p class="section-sub">每個分類由基礎到進階排列，照順序讀會最順。</p>
+    <div class="map" id="map"></div>
+  </section>
+</main>
+<footer class="site-footer"><div class="wrap">
+  <span>Finance Wiki・目前收錄 <b id="footer-count">—</b> 個概念</span>
+  <span>內容由 AI 依 <a href="about.html">AGENTS.md 規則</a> 從私人學習筆記改寫・<a href="https://github.com/">GitHub</a></span>
+</div></footer>
+<script src="assets/vendor/marked/marked.min.js"></script>
+<script src="assets/vendor/katex/katex.min.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>
